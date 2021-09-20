@@ -1,12 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@import "./abstract/variables";
+@import "./abstract/mixins";
 
-html {
-    font-size: 10px;
-}
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
 
-body {
-    background-color: #ddd;
-}
+@import "./layout/nav";
+
+@import "./pages/main";
+@import "./pages/login";
+@import "./pages/signup";

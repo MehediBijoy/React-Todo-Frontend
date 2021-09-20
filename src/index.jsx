@@ -1,15 +1,19 @@
-import React from "react"
-import {render} from "react-dom"
+import React from "react";
+import {render} from "react-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import "./styles/main.scss"
+import Navbar from "./components/Navbar"
+import TodoPage from "./components/main";
 
 const Index = () => {
     return (
-        <div>
-            <h1>
-                Mehedi Hasan Bappi
-            </h1>
-        </div>
+        <Router>
+            <Navbar />
+            <Switch>
+                <Route exact path='/' component={TodoPage} />
+            </Switch>
+        </Router>
     )
 }
 
